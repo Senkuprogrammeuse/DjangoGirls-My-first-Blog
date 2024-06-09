@@ -7,21 +7,17 @@
     <body>
         <div>
             <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-
-        <div>
-            <p> published: 01.06.2024, 14:16</p>
-            <h2><a href="">My first post</a></h2>
-            <p>
-                Esta es una primer prueba de que se puede crear un blog :D
-            </p>
-        </div>
-        <div>
-            <p> published: 01.06.2024, 14:36</p>
-            <h2><a href="">My second post</a></h2>
-            <p>
-                Esta es una primer prueba de que se puede crear un blog :D
-            </p>
-        </div>
+        </div>     
+            
+            <div>
+                {% for post in posts %} 
+                    <div>
+                        <br>
+                        <h2><a href="">{{ post.title }}</a></h2>
+                        <p>{{ post.text|linebreaksbr }}</p>
+                        <p><strong> publicado: {{ post.published_date }}</strong> </p>
+                    </div>
+                {% endfor %}
+            </div>
     </body>
 </html>
