@@ -9,8 +9,14 @@
             <h1><a href="/">Django Girls Blog</a></h1>
         </div> 
         <div>
-            <h1><a href="/">Deberia traer los post</a></h1>
-            {{posts}}
+            <h1><a href="/">Deberia mostrar cosas</a></h1>
+            {% for post in posts %}
+                <div>
+                    <p> publicado: {{ post.published_date }}</p>
+                    <h2><a href="">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
         </div>      
             
         {{posts}}
