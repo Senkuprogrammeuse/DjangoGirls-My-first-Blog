@@ -9,16 +9,6 @@
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>     
             
-            <div>
-                {% for post in posts %} 
-                    <div>
-                        <br>
-                        <p>Funciona? No, no quiere funcionar  </p>
-                        <h2><a href="">{{ post.title }}</a></h2>
-                        <p>{{ post.text|linebreaksbr }}</p>
-                        <p><strong> publicado: {{ post.published_date }}</strong> </p>
-                    </div>
-                {% endfor %}
-            </div>
+        {{posts}}
     </body>
 </html>
